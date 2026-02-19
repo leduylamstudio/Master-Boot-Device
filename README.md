@@ -30,9 +30,9 @@ ________________________________________________________________________________
 📂 SD Card File Structure
 For the device to function correctly, your SD card must be formatted to FAT32 and contain:
 
- 1.config.json: Stores your device name (Master Boot Device-v116) and theme colors.
+ 1. config.json: Stores your device name (Master Boot Device-v116) and theme colors.
 
- 2.Update.txt: The "BadUSB" payload script (Ducky Script format).
+ 2. Update.txt: The "BadUSB" payload script (Ducky Script format).
 
 __________________________________________________________________________________
 🚀 1. Arduino IDE Setup
@@ -57,7 +57,7 @@ ________________________________________________________________________________
 
 - The device will automatically load your settings from config.json on boot.
 ____________________________________________________________________________________
-🛠️ 3. Troubleshooting (Read This if Errors Occur)Issue Solution 
+🛠️ 3. Troubleshooting (Read This if Errors Occur)
 - White Screen / No Matrix: Check your User_Setup.h in the TFT_eSPI library folder. Ensure the correct Driver (e.g., ILI9341) and Pins are defined for the ESP32 Cheap Yellow Display (CYD). 
 
 - "SD Mount Failed": Ensure your 7GB SD card is formatted to FAT32. If it still fails, try a smaller card (16GB or less) or check that the card is pushed all the way in.
