@@ -1,0 +1,24 @@
+void executePayload() {
+  // Open the file from the SD card
+  File script = SD.open("/UPDATE.txt");
+  
+  if (script) {
+    while (script.available()) {
+      // Read one line at a time
+      String line = script.readStringUntil('\n');
+      line.trim();
+      
+      // If the line starts with STRING, type it out!
+      if (line.startsWith("STRING ")) {
+        bleKeyboard.print(line.substring(7));
+      }
+      // If it says ENTER, press the Enter key
+      else if (line.equals("ENTER")) {
+        bleKeyboard.write(KEY_RETURN);
+      }
+    }
+    script.close();
+  } else {
+    Serial.println("Error: UPDATE.txt not found on SD card!");
+  }
+}
