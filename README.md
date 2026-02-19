@@ -56,6 +56,20 @@ ________________________________________________________________________________
 
 - The device will automatically load your settings from config.json on boot.
 ____________________________________________________________________________________
+🛠️ 3. Troubleshooting (Read This if Errors Occur)Issue Solution 
+- White Screen / No Matrix: Check your User_Setup.h in the TFT_eSPI library folder. Ensure the correct Driver (e.g., ILI9341) and Pins are defined for the ESP32 Cheap Yellow Display (CYD). 
+
+- "SD Mount Failed": Ensure your 7GB SD card is formatted to FAT32. If it still fails, try a smaller card (16GB or less) or check that the card is pushed all the way in.
+
+- "FILE NOT FOUND": Verify your payload is named exactly Update.txt (case sensitive) and is in the root folder of the SD card, not inside a subfolder. 
+
+- RFID Not Reading: Check the wiring of the MFRC522. Ensure SDA, SCK, MOSI, MISO, and RST pins are correctly mapped in your code to the ESP32 headers. 
+
+- Bluetooth Not: ShowingEnsure your PC/Phone supports BLE (Bluetooth Low Energy). If it won't connect, try changing the deviceName in your config.json and rebooting. 
+
+- Upload Error (COM Port): Make sure you have the CH340 or CP2102 drivers installed on your PC so the Arduino IDE can "see" the ESP32.
+____________________________________________________________________________________
+
 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 ____________________________________________________________________________________
