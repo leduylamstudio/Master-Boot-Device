@@ -46,7 +46,7 @@ To compile the code successfully, you must have the Arduino IDE installed and ad
 
 - ArduinoJson: Allows the device to read your config.json from the SD card.
 
-- SD: Built-in library used to communicate with your 7GB SD card.
+- SD: Built-in library used to communicate with your 7GB+ SD card.
 
 Note: For the TFT_eSPI library, ensure you have configured your User_Setup.h file to match your ESP32 pinout, otherwise the screen will remain blank.
 ____________________________________________________________________________________
